@@ -55,7 +55,7 @@ export class AppHome extends LitElement {
       }
     }
 
-    .main-buttons-wrapper { display: flex; flex-direction: row; justify-content: center; }
+    .main-buttons-wrapper { display: flex; flex-direction: row; justify-content: center; position: relative;}
     /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
     .main-buttons-wrapper a { text-decoration:  none; }
 
@@ -94,6 +94,7 @@ export class AppHome extends LitElement {
     return html`
 
     <div class="page-wrapper">
+      <div class="background-image"></div>
       <div class="container">
           <div class="row">
             <div class="col">
@@ -148,11 +149,12 @@ export class AppHome extends LitElement {
                 </a>
 
               </div>
-              <div class="background-image"></div>
+
             </footer>
           </div>
         </div>
       </div>
+
     </div>
 
     `;

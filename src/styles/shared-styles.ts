@@ -39,4 +39,6 @@ export const styles = [
       font-size: 24px;
       padding: 12px;
     }
+
+    .page-wrapper { background-color: var(--color-scheme-01); height: 100vh; }
 `];
