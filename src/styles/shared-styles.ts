@@ -26,7 +26,7 @@ export const styles = [
       height: 33vh;
       background-image:
         linear-gradient(to bottom, var(--color-scheme-01), rgba(49, 68, 39, 0) 100%),
-        url('/assets/background.png');
+        url('/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/background.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom center;

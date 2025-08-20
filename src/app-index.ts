@@ -9,7 +9,7 @@ import { router } from './router';
 import { registerIconLibrary } from '@shoelace-style/shoelace/dist/utilities/icon-library.js';
 
 registerIconLibrary('nqm-icons', {
-  resolver: name => `/assets/bootstrap-icons/${name}.svg`,
+  resolver: name => `/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/bootstrap-icons/${name}.svg`,
 });
 
 @customElement('app-index')
