@@ -3,6 +3,7 @@ import { property, customElement } from 'lit/decorators.js';
 import { resolveRouterPath } from '../router';
 
 import '@shoelace-style/shoelace/dist/components/card/card.js';
+import '@shoelace-style/shoelace/dist/components/drawer/drawer.js';
 import '@shoelace-style/shoelace/dist/components/button/button.js';
 import '@shoelace-style/shoelace/dist/components/icon-button/icon-button.js';
 
@@ -18,6 +19,38 @@ export class AppHome extends LitElement {
   static styles = [
     styles,
     css`
+      sl-drawer::part(panel) {
+      background-color: var(--color-scheme-01);
+      color: var(--color-scheme-05);
+      width: 100%; /* ocupa toda la pantalla en mobile */
+      max-width: 320px; /* sidebar en desktop */
+    }
+
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .menu-links a {
+      display: block;
+      padding: 1rem;
+      border: 2px solid var(--color-scheme-05);
+      color: var(--color-scheme-05);
+      text-decoration: none;
+      font-family: var(--font-family-headers);
+      font-size: 1.2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu-links a:hover {
+      background-color: var(--color-scheme-03);
+      color: var(--color-scheme-01);
+    }
+
+
     #welcomeBar {
       display: flex;
       justify-content: center;
@@ -99,13 +132,15 @@ export class AppHome extends LitElement {
           <div class="row">
             <div class="col">
 
-              <top-app-bar>
-                <div slot="leading">
-                  <sl-icon-button name="list" library="nqm-icons"></sl-icon-button>
-                </div>
-                <div slot="heading">Museo NQ\u0308M</div>
-              </top-app-bar>
-
+            <!-- Menú lateral -->
+              <sl-drawer id="menuDrawer" placement="left" label="Menú">
+                <nav class="menu-links">
+                  <a href="/informacion">INFORMACIÓN</a>
+                  <a href="/historia">HISTORIA</a>
+                  <a href="/imagenes">IMÁGENES</a>
+                  <a href="/contacto">CONTACTO</a>
+                </nav>
+              </sl-drawer>
 
               <main>
               <div id="welcomeBar">

@@ -1,4 +1,4 @@
-import { LitElement, css } from 'lit';
+import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 import './pages/app-home';
@@ -15,6 +15,13 @@ registerIconLibrary('nqm-icons', {
 @customElement('app-index')
 export class AppIndex extends LitElement {
   static styles = css`
+    :host {
+      display: block;
+    }
+    .header {
+      background-color: #314427; /* verde */
+      padding: 8px 0; /* Opcional, para que no quede tan pegado */
+    }
     /*main {
       padding-left: 16px;
       padding-right: 16px;
@@ -33,8 +40,21 @@ export class AppIndex extends LitElement {
     });
   }
 
+
   render() {
-    // router config can be round in src/router.ts
-    return router.render();
+  return html`
+    <div class="header">
+      <top-app-bar></top-app-bar>
+    </div>
+
+    <main>
+      ${router.render()}
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Museo Nelovek Qobo Mokoit</p>
+    </footer>
+  `;
   }
+
 }
