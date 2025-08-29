@@ -75,3 +75,53 @@ a:hover {
 }
 */
 
+/* ============================= */
+/* Estilos responsivos < 768px   */
+/* ============================= */
+@media (max-width: 768px) {
+  header, footer {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-scheme-02);
+    color: var(--color-scheme-05);
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background-color: var(--color-scheme-01);
+    color: var(--color-scheme-05);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section {
+    padding: 1rem 0;
+  }
+}

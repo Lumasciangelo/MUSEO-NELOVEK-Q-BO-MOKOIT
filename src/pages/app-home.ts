@@ -103,6 +103,47 @@ export class AppHome extends LitElement {
     }
     .button-label sl-icon { font-size: 48px; }
 
+    .hero-card {
+      background-color: var(--color-scheme-03); /* tu color definido */
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 90%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-logo {
+      height: 60px;
+      width: auto;
+    }
+
+    .hero-title h1,
+    .hero-title h2 {
+      margin: 0;
+      font-family: var(--font-family-headers);
+      color: var(--color-scheme-06);
+    }
+
+    .hero-title h1 {
+      font-size: 1.2rem;
+    }
+
+    .hero-title h2 {
+      font-size: 1rem;
+    }
+
+    .hero-description {
+      font-family: var(--font-family-body);
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: var(--color-scheme-06);
+    }
 
 
   `];
@@ -144,14 +185,20 @@ export class AppHome extends LitElement {
 
               <main>
               <div id="welcomeBar">
-                <sl-card id="welcomeCard">
-                  <div slot="header">
-                    <h2>${this.message}</h2>
+                <div class="hero-card">
+                  <div class="hero-header">
+                    <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/icono-inicio.png" alt="Logo Museo" class="hero-logo" />
+                    <div class="hero-title">
+                      <h1>MUSEO NELOVEK <br> QOBO’ MOKOIT</h1>
+                    </div>
                   </div>
 
+                <div class="hero-description">
                   <p>
                     El Museo de Historia y Arqueología Originaria forma parte de un programa de Rescate y Revalorización de la identidad del Pueblo Mocoví de Colonia Dolores que está llevando adelante la Comisión Aborigen Aim Mokoilek con el asesoramiento de un equipo de investigación de la Universidad Nacional de Rosario.
                   </p>
+                </div>
+              </div>
 
                   ${'share' in navigator
                     ? html`<sl-button slot="footer" variant="default" @click="${this.share}">

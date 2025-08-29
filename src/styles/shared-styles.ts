@@ -4,6 +4,7 @@ import { bootstrap_grid } from '../styles/bootstrap';
 
 // these styles can be imported from any component
 // for an example of how to use this, check /pages/about-about.ts
+
 export const styles = [
   bootstrap_grid,
   css`
@@ -25,7 +26,6 @@ export const styles = [
       width: 100%;
       height: 33vh;
       background-image:
-        linear-gradient(to bottom, var(--color-scheme-01), rgba(49, 68, 39, 0) 100%),
         url('/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/background.png');
       background-size: cover;
       background-repeat: no-repeat;
