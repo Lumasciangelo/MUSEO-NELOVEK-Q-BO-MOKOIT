@@ -1,89 +1,88 @@
-// import { LitElement, css, html } from 'lit';
-// import { customElement, state } from 'lit/decorators.js';
+import { LitElement, css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
-// import '@shoelace-style/shoelace/dist/components/icon-button/icon-button.js';
+import '@shoelace-style/shoelace/dist/components/drawer/drawer.js';
+import '@shoelace-style/shoelace/dist/components/icon-button/icon-button.js';
 
-// @customElement('top-app-bar')
-// export class TopAppBar extends LitElement {
-//   @state()
-//   private menuOpen = false;
+@customElement('top-app-bar')
+export class TopAppBar extends LitElement {
 
-//   private toggleMenu() {
-//     this.menuOpen = !this.menuOpen;
-//   }
+  static styles = css`
+    sl-drawer::part(panel) {
+        width: 100% !important;
+        height: 100% !important;
+        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/background.png') no-repeat center center;
+        background-size: cover;
+        color: var(--color-scheme-05);
+    }
 
-//   static styles = css`
-//     :host {
-//       display: block;
-//       color: white;
-//       font-size: 1.2rem;
-//       padding: 0 16px;
-//     }
+    .menu-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      font-size: 1.8rem;
+      color: var(--color-scheme-05);
+      background: rgba(0,0,0,0.3);
+      border-radius: 50%;
+    }
 
-//     /* El botón del menú */
-//     sl-icon-button::part(base) {
-//       color: var(--color-scheme-03); /* Cambia el color del ícono */
-//       font-size: 24px; /* Opcional: ajusta tamaño si querés */
-//     }
+    .fullscreen-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      gap: 2rem;
+    }
 
-//     .menu-container {
-//       position: relative;
-//       display: inline-block;
-//     }
+    .fullscreen-menu a {
+      font-size: 1.5rem;
+      color: var(--color-scheme-05);
+      border: 2px solid var(--color-scheme-05);
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s;
+      width: 70%;
+      max-width: 300px;
+    }
 
-//     .menu-content {
-//       display: none;
-//       position: absolute;
-//       top: 100%; /* se despliega hacia abajo */
-//       left: 0;
-//       background-color: #2e5d34; /* verde */
-//       border-radius: 8px;
-//       padding: 8px 0;
-//       min-width: 160px;
-//       z-index: 10;
-//     }
+    .fullscreen-menu a:hover {
+      background: var(--color-scheme-05);
+      color: var(--color-scheme-01);
+    }
+  `;
 
-//     .menu-container.open .menu-content {
-//       display: flex;
-//       flex-direction: column;
-//     }
+  private toggleMenu() {
+    const drawer = this.renderRoot.querySelector('#menuDrawer') as any;
+    drawer.open ? drawer.hide() : drawer.show();
+  }
 
-//     .menu-item {
-//       background-color: #2e5d34; /* verde */
-//       color: #f5e6d3; /* crema */
-//       padding: 10px 16px;
-//       margin: 4px 8px;
-//       border-radius: 6px;
-//       cursor: pointer;
-//       transition: all 0.3s;
-//       text-align: left;
-//     }
+  private closeMenu() {
+    const drawer = this.renderRoot.querySelector('#menuDrawer') as any;
+    drawer.hide();
+  }
 
-//     .menu-item:hover {
-//       background-color: #f5e6d3; /* crema */
-//       color: #2e5d34; /* verde */
-//     }
-//   `;
+  render() {
+    return html`
+    <div class="page-wrapper">
+      <div class="background-image"></div>
+      <div class="container">
+          <div class="row">
+            <div class="col">
 
-//   render() {
-//     return html`
-//       <div class="menu-container ${this.menuOpen ? 'open' : ''}">
-//         <!-- Botón del menú -->
-//         <sl-icon-button
-//           name="list"
-//           library="nqm-icons"
-//           @click=${this.toggleMenu}>
-//         </sl-icon-button>
+            <!-- Menú lateral -->
+                <sl-icon-button name="list" label="Menú" class="menu-toggle" @click="${() => this.toggleMenu()}"></sl-icon-button>
 
-
-//         <!-- Opciones del menú -->
-//         <div class="menu-content">
-//           <div class="menu-item">Información</div>
-//           <div class="menu-item">Historia</div>
-//           <div class="menu-item">Imágenes</div>
-//           <div class="menu-item">Contacto</div>
-//         </div>
-//       </div>
-//     `;
-//   }
-// }
+                <sl-drawer id="menuDrawer" placement="end" no-header>
+                    <nav class="fullscreen-menu">
+                    <a href="/informacion" @click="${this.closeMenu}">INFORMACIÓN</a>
+                    <a href="/historia" @click="${this.closeMenu}">HISTORIA</a>
+                    <a href="/imagenes" @click="${this.closeMenu}">IMÁGENES</a>
+                    <a href="/contacto" @click="${this.closeMenu}">CONTACTO</a>
+                    </nav>
+                </sl-drawer>
+    `;
+  }
+}
