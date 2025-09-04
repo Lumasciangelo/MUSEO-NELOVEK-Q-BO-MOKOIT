@@ -40,5 +40,10 @@ export const styles = [
       padding: 12px;
     }
 
-    .page-wrapper { background-color: var(--color-scheme-01); height: 100vh; }
+    .page-wrapper {
+      background-color: transparent;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
 `];
