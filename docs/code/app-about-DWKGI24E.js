@@ -1,10 +1,10 @@
-import{i as h,r as c,x as i,s as d,t as u}from"./index-DnfxS2oB.js";const l=h`
+import{i as h,r as c,x as d,s as i,t as u}from"./index-DhSQFL4l.js";const l=h`
   @media(min-width: 1000px) {
     sl-card {
       max-width: 70vw;
     }
   }
-`;var m=Object.defineProperty,f=Object.getOwnPropertyDescriptor,b=(n,s,r,a)=>{for(var e=a>1?void 0:a?f(s,r):s,t=n.length-1,o;t>=0;t--)(o=n[t])&&(e=(a?o(s,r,e):o(e))||e);return a&&e&&m(s,r,e),e};let p=class extends c{render(){return i`
+`;var m=Object.getOwnPropertyDescriptor,b=(t,r,p,o)=>{for(var e=o>1?void 0:o?m(r,p):r,a=t.length-1,n;a>=0;a--)(n=t[a])&&(e=n(e)||e);return e};let s=class extends c{render(){return d`
       <app-header ?enableBack="${!0}"></app-header>
 
       <main>
@@ -23,5 +23,5 @@ import{i as h,r as c,x as i,s as d,t as u}from"./index-DnfxS2oB.js";const l=h`
               docs</a> to learn more about the advanced features that you can use in your PWA</p>
         </sl-card>
       </main>
-    `}};p.styles=[d,l];p=b([u("app-about")],p);export{p as AppAbout};
-//# sourceMappingURL=app-about-DcF-DDjH.js.map
+    `}};s.styles=[i,l];s=b([u("app-about")],s);export{s as AppAbout};
+//# sourceMappingURL=app-about-DWKGI24E.js.map

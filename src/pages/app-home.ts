@@ -1,6 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
-import { resolveRouterPath } from '../router';
+// import { resolveRouterPath } from '../router';
 
 import '@shoelace-style/shoelace/dist/components/card/card.js';
 import '@shoelace-style/shoelace/dist/components/drawer/drawer.js';
@@ -8,6 +8,8 @@ import '@shoelace-style/shoelace/dist/components/button/button.js';
 import '@shoelace-style/shoelace/dist/components/icon-button/icon-button.js';
 
 import { styles } from '../styles/shared-styles';
+
+import '../components/app-viewer-3d';
 
 @customElement('app-home')
 export class AppHome extends LitElement {
@@ -51,41 +53,41 @@ export class AppHome extends LitElement {
         }
       }
 
-
       @media (horizontal-viewport-segments: 2) {
-        #welcomeBar {
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
-        }
+         #welcomeBar {
+           flex-direction: row;
+           align-items: flex-start;
+           justify-content: space-between;
+         }
 
-        #welcomeCard {
-          margin-right: 64px;
-        }
-      }
+         #welcomeCard {
+           margin-right: 64px;
+         }
+       }
 
-      .main-buttons-wrapper { display: flex; flex-direction: row; justify-content: center; position: relative;}
-      /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
-      .main-buttons-wrapper a { text-decoration:  none; }
+       .main-buttons-wrapper { display: flex; flex-direction: row; justify-content: center; position: relative;}
+       /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
+       .main-buttons-wrapper a { text-decoration:  none; }
 
-      .button-label {
-        color: var(--color-scheme-03);
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        justify-content: center;
-        align-items: center;
-        margin: var(--sl-spacing-large);
-      }
-      .button-label sl-icon { font-size: 48px; }
+       .button-label {
+         color: var(--color-scheme-03);
+         display: flex;
+         flex-direction: column;
+         gap: 4px;
+         justify-content: center;
+         align-items: center;
+         margin: var(--sl-spacing-large);
+       }
+       .button-label sl-icon { font-size: 48px; }
 
-      .hero-card {
-        background-color: var(--color-scheme-03); /* tu color definido */
-        padding: 1rem;
-        margin: 1rem auto;
-        max-width: 90%;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      }
+       .hero-card {
+         background-color: var(--color-scheme-03); /* tu color definido */
+         padding: 1rem;
+         /*margin: 1rem auto;*/
+         /*max-width: 90%;*/
+         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+       }
+
 
       .hero-header {
         display: flex;
@@ -144,68 +146,65 @@ export class AppHome extends LitElement {
     return html`
 
     <div class="page-wrapper">
-      <div class="background-image"></div>
-      <div class="container">
-          <div class="row">
-            <div class="col">
 
-            <!-- Menú lateral -->
-              <top-app-bar></top-app-bar>
 
-              <main>
-              <div id="welcomeBar">
-                <div class="hero-card">
-                  <div class="hero-header">
-                    <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/icono-inicio.png" alt="Logo Museo" class="hero-logo" />
-                    <div class="hero-title">
-                      <h1>MUSEO NELOVEK <br> QOBO’ MOKOIT</h1>
-                    </div>
-                  </div>
+      <!-- Menú lateral -->
+      <top-app-bar></top-app-bar>
 
-                <div class="hero-description">
-                  <p>
-                    El Museo de Historia y Arqueología Originaria forma parte de un programa de Rescate y Revalorización de la identidad del Pueblo Mocoví de Colonia Dolores que está llevando adelante la Comisión Aborigen Aim Mokoilek con el asesoramiento de un equipo de investigación de la Universidad Nacional de Rosario.
-                  </p>
+      <main>
+
+          <section>
+            <div class="hero-card">
+              <div class="hero-header">
+                <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/icono-inicio.png" alt="Logo Museo" class="hero-logo" />
+                <div class="hero-title">
+                  <h1>MUSEO NELOVEK<br>Q\u0308OBO’ MOKOIT</h1>
                 </div>
               </div>
 
-                  ${'share' in navigator
-                    ? html`<sl-button slot="footer" variant="default" @click="${this.share}">
-                              <sl-icon slot="prefix" name="share"></sl-icon>
-                              Share this Starter!
-                            </sl-button>`
-                    : null}
-                </sl-card>
-
-
-                <!--<sl-button href="${resolveRouterPath('about')}" variant="primary">Navigate to About</sl-button>-->
+              <div class="hero-description">
+                <p>
+                  El Museo de Historia y Arqueología Originaria forma parte de un programa de Rescate y Revalorización de la identidad del Pueblo Mocoví de Colonia Dolores que está llevando adelante la Comisión Aborigen Aim Mokoilek con el asesoramiento de un equipo de investigación de la Universidad Nacional de Rosario.
+                </p>
               </div>
-            </main>
+            </div>
+          </section>
+          <section>
+            <app-viewer-3d src="/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/3d/vasija01.glb"></app-viewer-3d>
+          </section>
 
-            <footer>
-              <div class="main-buttons-wrapper">
 
-                <a href="">
-                  <div class="button-label">
-                    <sl-icon name="person-walking" library="nqm-icons"></sl-icon>
-                    <div class="label">Visita libre</div>
-                  </div>
-                </a>
-                <a href="">
-                  <div class="button-label">
-                    <sl-icon name="headphones" library="nqm-icons"></sl-icon>
-                    <div class="label">Visita guiada</div>
-                  </div>
-                </a>
+            ${'share' in navigator
+              ? html`<sl-button slot="footer" variant="default" @click="${this.share}">
+                        <sl-icon slot="prefix" name="share"></sl-icon>
+                        ¡Compartir el museo!
+                      </sl-button>`
+              : null}
 
-              </div>
+      </main>
 
-            </footer>
+      <div class="main-buttons-wrapper">
+        <a href="">
+          <div class="button-label">
+            <sl-icon name="person-walking" library="nqm-icons"></sl-icon>
+            <div class="label">Visita libre</div>
           </div>
-        </div>
+        </a>
+        <a href="">
+          <div class="button-label">
+            <sl-icon name="headphones" library="nqm-icons"></sl-icon>
+            <div class="label">Visita guiada</div>
+          </div>
+        </a>
       </div>
 
+
+
+      <div class="background-image"></div>
     </div>
+    <footer>
+      <p>&copy; 2025 Museo Nelovek Q\u0308obo’ Mokoit</p>
+    </footer>
 
     `;
   }
