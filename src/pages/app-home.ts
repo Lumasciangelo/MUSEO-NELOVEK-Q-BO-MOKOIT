@@ -65,9 +65,20 @@ export class AppHome extends LitElement {
          }
        }
 
-       .main-buttons-wrapper { display: flex; flex-direction: row; justify-content: center; position: relative;}
-       /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
-       .main-buttons-wrapper a { text-decoration:  none; }
+      .main-buttons-wrapper { display: flex; flex-direction: row; justify-content: center; position: relative;}
+      /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
+      .main-buttons-wrapper a { text-decoration:  none; }
+
+      .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../docs/assets/background.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+      }
 
 <<<<<<< Updated upstream
        .button-label {
