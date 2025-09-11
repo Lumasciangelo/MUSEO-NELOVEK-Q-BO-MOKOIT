@@ -24,7 +24,7 @@ export class AppHome extends LitElement {
       sl-drawer::part(panel) {
         width: 100% !important;
         height: 100% !important;
-        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/background.png') no-repeat center center;
+        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/background.png') no-repeat center center;
         background-size: cover;
         color: var(--color-scheme-05);
       }
@@ -69,6 +69,7 @@ export class AppHome extends LitElement {
        /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
        .main-buttons-wrapper a { text-decoration:  none; }
 
+<<<<<<< Updated upstream
        .button-label {
          color: var(--color-scheme-03);
          display: flex;
@@ -87,6 +88,29 @@ export class AppHome extends LitElement {
          /*max-width: 90%;*/
          box-shadow: 0 2px 6px rgba(0,0,0,0.15);
        }
+=======
+      .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../docs/assets/background.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+      }
+
+      .button-label {
+        color: var(--color-scheme-03);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+        margin: var(--sl-spacing-large);
+      }
+      .button-label sl-icon { font-size: 48px; }
+>>>>>>> Stashed changes
 
 
       .hero-header {
