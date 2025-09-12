@@ -15,12 +15,14 @@ export default defineConfig({
     VitePWA({
       strategies: "injectManifest",
       injectManifest: {
+        maximumFileSizeToCacheInBytes: 5000000, // 5 MB
         swSrc: 'public/sw.js',
         swDest: 'dist/sw.js',
         globDirectory: 'dist',
         globPatterns: [
           '**/*.{html,js,css,json,png}',
         ],
+        globIgnores: ['assets/background.png', 'assets/fondo_museo.svg'],
       },
       injectRegister: false,
       manifest: false,
