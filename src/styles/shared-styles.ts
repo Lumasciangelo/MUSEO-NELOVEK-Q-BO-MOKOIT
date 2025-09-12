@@ -16,9 +16,9 @@ export const styles = [
     .background-image {
         position: relative; /* Necesario para posicionar el pseudo-elemento */
         height: 200px;
-        background-image: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/background.png'); /* Pon la imagen aquí */
+        background-image: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/fondo_museo.png');
         background-size: cover;
-        background-position: center;
+        background-position: center top;
     }
 
     .background-image::before {
@@ -47,8 +47,6 @@ export const styles = [
       min-height: 100vh; /* Ocupa como mínimo el 100% de la altura de la ventana */
 
     }
-
-
 
     section {
       width: 100%;

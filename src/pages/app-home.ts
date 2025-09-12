@@ -24,8 +24,9 @@ export class AppHome extends LitElement {
       sl-drawer::part(panel) {
         width: 100% !important;
         height: 100% !important;
-        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/background.png') no-repeat center center;
+        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/fondo_museo.png') no-repeat center center;
         background-size: cover;
+        background-position: center top;
         color: var(--color-scheme-05);
       }
 
@@ -75,12 +76,11 @@ export class AppHome extends LitElement {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../docs/assets/background.png') no-repeat center center;
+        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/fondo_museo.png') no-repeat center center;
         background-size: cover;
         z-index: -1;
       }
 
-<<<<<<< Updated upstream
        .button-label {
          color: var(--color-scheme-03);
          display: flex;
@@ -99,8 +99,8 @@ export class AppHome extends LitElement {
          /*max-width: 90%;*/
          box-shadow: 0 2px 6px rgba(0,0,0,0.15);
        }
-=======
-      .background-image {
+
+       .background-image {
         position: fixed;
         top: 0;
         left: 0;
@@ -111,18 +111,11 @@ export class AppHome extends LitElement {
         z-index: -1;
       }
 
-      .button-label {
-        color: var(--color-scheme-03);
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        justify-content: center;
-        align-items: center;
-        margin: var(--sl-spacing-large);
+      .button-icon {
+        width: 80px; /* Ajusta el tamaño que necesites */
+        height: 80px;
+        margin-right: 8px; /* Espacio entre icono y texto */
       }
-      .button-label sl-icon { font-size: 48px; }
->>>>>>> Stashed changes
-
 
       .hero-header {
         display: flex;
@@ -134,6 +127,13 @@ export class AppHome extends LitElement {
       .hero-logo {
         height: 60px;
         width: auto;
+      }
+
+      /* Línea vertical entre logo y texto */
+      .hero-divider {
+        width: 2px; /* grosor de la línea */
+        height: 60px; /* misma altura que el logo */
+        background-color: black; /* color de la línea */
       }
 
       .hero-title h1,
@@ -191,7 +191,9 @@ export class AppHome extends LitElement {
           <section>
             <div class="hero-card">
               <div class="hero-header">
-                <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/icono-inicio.png" alt="Logo Museo" class="hero-logo" />
+                <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/logo_verde.svg" alt="Logo Museo" class="hero-logo" />
+                <div class="hero-divider"></div>
+
                 <div class="hero-title">
                   <h1>MUSEO NELOVEK<br>Q\u0308OBO’ MOKOIT</h1>
                 </div>
@@ -221,13 +223,13 @@ export class AppHome extends LitElement {
       <div class="main-buttons-wrapper">
         <a href="">
           <div class="button-label">
-            <sl-icon name="person-walking" library="nqm-icons"></sl-icon>
+            <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/persona_crema.svg" alt="Visita libre" class="button-icon">
             <div class="label">Visita libre</div>
           </div>
         </a>
         <a href="">
           <div class="button-label">
-            <sl-icon name="headphones" library="nqm-icons"></sl-icon>
+            <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/auriculares_crema.svg" alt="Visita libre" class="button-icon">
             <div class="label">Visita guiada</div>
           </div>
         </a>

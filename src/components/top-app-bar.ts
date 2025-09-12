@@ -11,8 +11,9 @@ export class TopAppBar extends LitElement {
     sl-drawer::part(panel) {
         width: 100% !important;
         height: 100% !important;
-        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/background.png') no-repeat center center;
+        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/fondo_museo.png') no-repeat center center;
         background-size: cover;
+        background-position: center top;
         color: var(--color-scheme-05);
     }
 
