@@ -3,6 +3,15 @@ import { customElement } from 'lit/decorators.js';
 
 import './pages/app-home';
 import './components/top-app-bar';
+
+// Import our custom CSS
+// import './styles/scss/styles.scss';
+
+// Import all of Bootstrap’s JS
+// import * as bootstrap from 'bootstrap'
+
+import './styles/main.scss'; // ¡Importa aquí tu archivo SASS!
+
 import './styles/global.css';
 import './pages/app-chatbot/app-chatbot';
 import './pages/app-pages/app-encuentros';

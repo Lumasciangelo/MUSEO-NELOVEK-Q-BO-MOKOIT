@@ -16,8 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "@google/model-viewer": "^4.1.0",
+    "@popperjs/core": "^2.11.8",
     "@shoelace-style/shoelace": "^2.18.0",
     "@thepassle/app-tools": "^0.9.12",
+    "bootstrap": "^5.3.8",
     "lit": "^3.2.1",
     "urlpattern-polyfill": "^10.0.0",
     "workbox-build": "^7.3.0",
@@ -25,6 +27,7 @@
     "workbox-precaching": "^7.3.0"
   },
   "devDependencies": {
+    "sass": "^1.92.1",
     "typescript": "^5.6.3",
     "vite": "^7.1.5",
     "vite-plugin-pwa": "^1.0.3"

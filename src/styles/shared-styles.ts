@@ -1,12 +1,12 @@
 import { css } from 'lit';
 
-import { bootstrap_grid } from '../styles/bootstrap';
+// import { bootstrap_grid } from '../styles/bootstrap';
 
 // these styles can be imported from any component
 // for an example of how to use this, check /pages/about-about.ts
 
 export const styles = [
-  bootstrap_grid,
+  // bootstrap_grid,
   css`
     main {
       flex-grow: 1; /* Permite que el contenido principal ocupe todo el espacio disponible */
@@ -44,7 +44,7 @@ export const styles = [
       background-color: var(--color-scheme-01);
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Ocupa como mínimo el 100% de la altura de la ventana */
+      min-height: calc(100vh - 88px); /* Ocupa como mínimo el 100% de la altura de la ventana */
 
     }
 

@@ -139,8 +139,9 @@ export class AppHome extends LitElement {
       .hero-title h1,
       .hero-title h2 {
         margin: 0;
-        font-family: var(--font-family-headers);
+        font-family: var(--font-family-body);
         color: var(--color-scheme-06);
+        font-weight: 400;
       }
 
       .hero-title h1 {
@@ -179,21 +180,23 @@ export class AppHome extends LitElement {
 
   render() {
     return html`
-
     <div class="page-wrapper">
-
 
       <!-- Menú lateral -->
       <top-app-bar></top-app-bar>
 
       <main>
 
-          <section>
+          <section class="container">
             <div class="hero-card">
               <div class="hero-header">
+<<<<<<< Updated upstream
                 <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/logo_verde.svg" alt="Logo Museo" class="hero-logo" />
                 <div class="hero-divider"></div>
 
+=======
+                <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/logo.svg" alt="Logo Museo" class="hero-logo" />
+>>>>>>> Stashed changes
                 <div class="hero-title">
                   <h1>MUSEO NELOVEK<br>Q\u0308OBO’ MOKOIT</h1>
                 </div>
@@ -201,22 +204,25 @@ export class AppHome extends LitElement {
 
               <div class="hero-description">
                 <p>
-                  El Museo de Historia y Arqueología Originaria forma parte de un programa de Rescate y Revalorización de la identidad del Pueblo Mocoví de Colonia Dolores que está llevando adelante la Comisión Aborigen Aim Mokoilek con el asesoramiento de un equipo de investigación de la Universidad Nacional de Rosario.
+                  Museo Nelovek q̈obo’ Mokoit
+Museo de Historia y Arqueología Originaria
+Primer museo comunitario y bilingüe de la provincia de Santa Fe, se encuentra en la localidad de Colonia Dolores pertenece a la Comunidad Mocoví, administrado por la Comisión Aborigen Aim Mokoilek
                 </p>
               </div>
             </div>
           </section>
-          <section>
+
+          <!--<section>
             <app-viewer-3d src="/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/3d/vasija01.glb"></app-viewer-3d>
-          </section>
+          </section>-->
 
 
-            ${'share' in navigator
-              ? html`<sl-button slot="footer" variant="default" @click="${this.share}">
-                        <sl-icon slot="prefix" name="share"></sl-icon>
-                        ¡Compartir el museo!
-                      </sl-button>`
-              : null}
+          ${'share' in navigator
+            ? html`<sl-button slot="footer" variant="default" @click="${this.share}">
+                      <sl-icon slot="prefix" name="share"></sl-icon>
+                      ¡Compartir el museo!
+                    </sl-button>`
+            : null}
 
       </main>
 

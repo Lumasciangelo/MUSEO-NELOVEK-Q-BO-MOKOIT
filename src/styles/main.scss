@@ -1,0 +1,57 @@
+/* src/styles/main.scss */
+
+// 1. SOBREESCRIBE LAS VARIABLES DE BOOTSTRAP AQUÍ
+// Es crucial hacerlo ANTES de importar los archivos originales de Bootstrap.
+// Puedes encontrar todas las variables en: node_modules/bootstrap/scss/_variables.scss
+
+$primary: #5851ff;      // Cambiemos el color primario
+$secondary: #b4b4b4;    // Cambiemos el color secundario
+$font-family-base: 'Segoe UI', sans-serif; // Cambiemos la fuente base
+$border-radius: 0.5rem; // Hagamos los bordes un poco más redondeados
+
+// 2. IMPORTA LAS PARTES ESENCIALES DE BOOTSTRAP (ORDEN CORREGIDO)
+// Este es el orden correcto y obligatorio para que todo funcione.
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";      // <--- ¡ESTE ES EL ARCHIVO CLAVE QUE FALTABA!
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities"; // Es buena práctica incluirlo aquí también
+
+// 3. IMPORTA ÚNICAMENTE LOS COMPONENTES QUE NECESITAS
+// Descomenta las líneas de los componentes que vayas a usar en tu app.
+// Esto optimizará el tamaño de tu CSS final.
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+
+// Importa helpers y utilidades si los necesitas
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
