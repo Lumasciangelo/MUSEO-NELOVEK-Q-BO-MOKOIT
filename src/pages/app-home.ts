@@ -11,6 +11,8 @@ import { styles } from '../styles/shared-styles';
 
 import '../components/app-viewer-3d';
 
+import '../components/app-carrusel-v2';
+
 @customElement('app-home')
 export class AppHome extends LitElement {
 
@@ -182,10 +184,6 @@ export class AppHome extends LitElement {
 
     <div class="page-wrapper">
 
-
-      <!-- Menú lateral -->
-      <top-app-bar></top-app-bar>
-
       <main>
 
           <section>
@@ -207,7 +205,10 @@ export class AppHome extends LitElement {
             </div>
           </section>
           <section>
-            <app-viewer-3d src="/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/3d/vasija01.glb"></app-viewer-3d>
+            <app-carousel-v2 .images=${['assets/los-hornitos-01.jpg','assets/los-hornitos-02.jpg','assets/los-hornitos-03.jpg']}></app-carousel-v2>
+          </section>
+          <section>
+            <!--<app-viewer-3d src="/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/3d/vasija01.glb"></app-viewer-3d>-->
           </section>
 
 
