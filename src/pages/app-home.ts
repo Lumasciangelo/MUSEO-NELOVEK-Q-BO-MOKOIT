@@ -9,9 +9,7 @@ import '@shoelace-style/shoelace/dist/components/icon-button/icon-button.js';
 
 import { styles } from '../styles/shared-styles';
 
-import '../components/app-viewer-3d';
 
-import '../components/app-carrusel-v2';
 
 @customElement('app-home')
 export class AppHome extends LitElement {
@@ -72,16 +70,6 @@ export class AppHome extends LitElement {
       /*.main-buttons-wrapper sl-button { margin: var(--sl-spacing-3x-large); }*/
       .main-buttons-wrapper a { text-decoration:  none; }
 
-      .background-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/fondo_museo.png') no-repeat center center;
-        background-size: cover;
-        z-index: -1;
-      }
 
        .button-label {
          color: var(--color-scheme-03);
@@ -102,16 +90,6 @@ export class AppHome extends LitElement {
          box-shadow: 0 2px 6px rgba(0,0,0,0.15);
        }
 
-       .background-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('../docs/assets/background.png') no-repeat center center;
-        background-size: cover;
-        z-index: -1;
-      }
 
       .button-icon {
         width: 80px; /* Ajusta el tamaño que necesites */
@@ -127,14 +105,14 @@ export class AppHome extends LitElement {
       }
 
       .hero-logo {
-        height: 60px;
+        height: 120px;
         width: auto;
       }
 
       /* Línea vertical entre logo y texto */
       .hero-divider {
         width: 2px; /* grosor de la línea */
-        height: 60px; /* misma altura que el logo */
+        height: 120px; /* misma altura que el logo */
         background-color: black; /* color de la línea */
       }
 
@@ -204,12 +182,7 @@ export class AppHome extends LitElement {
               </div>
             </div>
           </section>
-          <section>
-            <app-carousel-v2 .images=${['assets/los-hornitos-01.jpg','assets/los-hornitos-02.jpg','assets/los-hornitos-03.jpg']}></app-carousel-v2>
-          </section>
-          <section>
-            <!--<app-viewer-3d src="/MUSEO-NELOVEK-Q-BO-MOKOIT/assets/3d/vasija01.glb"></app-viewer-3d>-->
-          </section>
+
 
 
             ${'share' in navigator
@@ -241,7 +214,7 @@ export class AppHome extends LitElement {
       <div class="background-image"></div>
     </div>
     <footer>
-      <p>&copy; 2025 Museo Nelovek Q\u0308obo’ Mokoit</p>
+      &copy; 2025 Museo Nelovek Q\u0308obo’ Mokoit
     </footer>
 
     `;

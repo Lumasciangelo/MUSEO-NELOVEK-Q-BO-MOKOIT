@@ -35,9 +35,19 @@ With it you get an app that:
 and all with just a few button clicks 😊.
 
 ## GIT
+
+### nueva rama
 git checkout -b fix-background-image
 git add .
 git commit [-m]
 git push --set-upstream origin fix-background-image
+
+### seguir nueva rama desde origin
+```bash
+git branch -r
+  origin/agregando-swiperjs
+  origin/fix-background-image
+  origin/main
+git checkout -b agregando-swiperjs origin/agregando-swiperjs
 
 

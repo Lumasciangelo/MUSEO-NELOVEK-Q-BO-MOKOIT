@@ -42,11 +42,25 @@ export const styles = [
 
     .page-wrapper {
       background-color: var(--color-scheme-01);
+      background: #314427;
+      background: linear-gradient(180deg, rgba(49, 68, 39, 1) 0%, rgba(49, 68, 39, 1) 90%, rgba(49, 68, 39, 0.5) 100%);
+
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Ocupa como mínimo el 100% de la altura de la ventana */
-
+      min-height: calc(100vh - 65px); /* Ocupa como mínimo el 100% de la altura de la ventana */
     }
+
+      .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('assets/background.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+      }
+
 
     section {
       width: 100%;
