@@ -36,7 +36,7 @@
     onload="document.documentElement.classList.add('sl-theme-dark');">
 
   <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
-  <link rel="manifest" href="/MUSEO-NELOVEK-Q-BO-MOKOIT/manifest.json" />
+  <link rel="manifest" href="manifest.json" />
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
     if ('serviceWorker' in navigator) {
       window.onload = () => {
         navigator.serviceWorker.register(
-          '/MUSEO-NELOVEK-Q-BO-MOKOIT/sw.js'
+          '/sw.js'
         );
       }
     }

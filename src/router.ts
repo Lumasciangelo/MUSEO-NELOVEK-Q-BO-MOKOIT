@@ -24,12 +24,12 @@ export const router = new Router({
         render: () => html`<app-home></app-home>`
       },
       {
-        path: resolveRouterPath('about'),
-        title: 'About',
+        path: resolveRouterPath('los-hornitos'),
+        title: 'Panel los hornitos',
         plugins: [
-          lazy(() => import('./pages/app-about/app-about.js')),
+          lazy(() => import('./pages/app-paneles/app-panel-hornitos')),
         ],
-        render: () => html`<app-about></app-about>`
+        render: () => html`<app-panel-hornitos></app-panel-hornitos>`
       }
     ]
   });

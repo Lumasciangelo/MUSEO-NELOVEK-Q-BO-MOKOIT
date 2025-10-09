@@ -1,6 +1,11 @@
 import { LitElement, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
 import './pages/app-home';
 import './components/top-app-bar';
 import './styles/global.css';

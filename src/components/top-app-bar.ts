@@ -53,6 +53,35 @@ export class TopAppBar extends LitElement {
       background: var(--color-scheme-05);
       color: var(--color-scheme-01);
     }
+
+    .header {
+      padding: 8px 4px;
+      background-color: var(--color-scheme-03);
+      height: 48px;
+      display: flex;
+    }
+    .leading-icon {
+      font-size: 24px;
+      margin-right: 8px;
+      padding: 12px;
+      align-self: center;
+      line-height: 1rem;
+    }
+    .trailing-icon {
+      font-size: 24px;
+      margin-left: 8px;
+      padding: 12px;
+      align-self: center;
+      line-height: 1rem;
+    }
+    .title {
+      display: flex;
+      align-self: center;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 30px;
+    }
+
   `;
 
   private toggleMenu() {
@@ -67,23 +96,23 @@ export class TopAppBar extends LitElement {
 
   render() {
     return html`
-    <div class="page-wrapper">
-      <div class="background-image"></div>
-      <div class="container">
-          <div class="row">
-            <div class="col">
+      <header class="header">
+        <div class="leading-icon"><sl-icon name="logo_verde" library="nqm-icons"></sl-icon></div>
+        <div class="title">${this.title}</div>
+        <div class="trailing-icon"><sl-icon name="menu_verde" library="nqm-icons"></sl-icon></div>
+      </header>
 
-            <!-- Menú lateral -->
-                <sl-icon-button name="list" label="Menú" class="menu-toggle" @click="${() => this.toggleMenu()}"></sl-icon-button>
+      <!-- Menú lateral -->
+      <!--<sl-icon-button name="list" label="Menú" class="menu-toggle" @click="${() => this.toggleMenu()}"></sl-icon-button>-->
 
-                <sl-drawer id="menuDrawer" placement="end" no-header>
-                    <nav class="fullscreen-menu">
-                    <a href="/informacion" @click="${this.closeMenu}">INFORMACIÓN</a>
-                    <a href="/historia" @click="${this.closeMenu}">HISTORIA</a>
-                    <a href="/imagenes" @click="${this.closeMenu}">IMÁGENES</a>
-                    <a href="/contacto" @click="${this.closeMenu}">CONTACTO</a>
-                    </nav>
-                </sl-drawer>
+      <sl-drawer id="menuDrawer" placement="end" no-header>
+          <nav class="fullscreen-menu">
+          <a href="/informacion" @click="${this.closeMenu}">INFORMACIÓN</a>
+          <a href="/historia" @click="${this.closeMenu}">HISTORIA</a>
+          <a href="/imagenes" @click="${this.closeMenu}">IMÁGENES</a>
+          <a href="/contacto" @click="${this.closeMenu}">CONTACTO</a>
+          </nav>
+      </sl-drawer>
     `;
   }
 }
