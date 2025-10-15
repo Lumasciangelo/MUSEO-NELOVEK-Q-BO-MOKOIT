@@ -49,5 +49,14 @@ git branch -r
   origin/fix-background-image
   origin/main
 git checkout -b agregando-swiperjs origin/agregando-swiperjs
+```
 
-
+### merge entre rama "nueva-caracteristica" y "main"
+```bash
+git checkout main
+git pull origin main
+git merge nueva-caracteristica
+git add .
+git commit -m "Resolved merge conflicts and merged your-feature-branch into main"
+git push origin master
+```

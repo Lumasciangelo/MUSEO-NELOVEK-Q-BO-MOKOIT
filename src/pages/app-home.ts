@@ -167,7 +167,7 @@ export class AppHome extends LitElement {
           <section>
             <div class="hero-card">
               <div class="hero-header">
-                <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/logo_verde-332-3850-NB01.svg" alt="Logo Museo" class="hero-logo" />
+                <img src="assets/logo_verde.svg" alt="Logo Museo" class="hero-logo" />
                 <div class="hero-divider"></div>
 
                 <div class="hero-title">
@@ -197,13 +197,13 @@ export class AppHome extends LitElement {
       <div class="main-buttons-wrapper">
         <a href="">
           <div class="button-label">
-            <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/persona_crema-332-3850-NB01.svg" alt="Visita libre" class="button-icon">
+            <img src="assets/persona_crema.svg" alt="Visita libre" class="button-icon">
             <div class="label">Visita libre</div>
           </div>
         </a>
-        <a href="">
+        <a href="los-hornitos">
           <div class="button-label">
-            <img src="/MUSEO-NELOVEK-Q-BO-MOKOIT/docs/assets/auriculares_crema-332-3850-NB01.svg" alt="Visita libre" class="button-icon">
+            <img src="assets/auriculares_crema.svg" alt="Visita libre" class="button-icon">
             <div class="label">Visita guiada</div>
           </div>
         </a>

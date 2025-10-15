@@ -3,6 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import '@shoelace-style/shoelace/dist/components/drawer/drawer.js';
 import '@shoelace-style/shoelace/dist/components/icon-button/icon-button.js';
+import { resolveRouterPath } from '../router';
 
 @customElement('top-app-bar')
 export class TopAppBar extends LitElement {
@@ -97,7 +98,7 @@ export class TopAppBar extends LitElement {
   render() {
     return html`
       <header class="header">
-        <div class="leading-icon"><sl-icon name="logo_verde" library="nqm-icons"></sl-icon></div>
+        <div class="leading-icon"><a href="${resolveRouterPath()}" ><sl-icon name="logo_verde" library="nqm-icons"></sl-icon></a></div>
         <div class="title">${this.title}</div>
         <div class="trailing-icon"><sl-icon name="menu_verde" library="nqm-icons"></sl-icon></div>
       </header>
