@@ -75,7 +75,7 @@ export class AppCarouselV2 extends LitElement {
       slidesPerView: 1,
       loop: true,
       autoplay: { delay: 3000 },
-      breakpoints: {
+      /*breakpoints: {
         576: {
           slidesPerView: 1,
           //spaceBetween: 20,
@@ -88,7 +88,7 @@ export class AppCarouselV2 extends LitElement {
           slidesPerView: 3,
           //spaceBetween: 50,
         },
-      },
+      },*/
       navigation: {
         nextEl: this.swiperButtonNext,
         prevEl: this.swiperButtonPrev,
